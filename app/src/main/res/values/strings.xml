@@ -1,0 +1,245 @@
+<resources>
+    <string name="app_name">Creed</string>
+
+    <!-- Main header text for the app [CHAR LIMIT = 10] -->
+    <string name="header_text">Creed</string>
+
+    <!-- Star symbol [CHAR LIMIT = NONE] -->
+    <string name="star_symbol">*</string>
+
+    <!-- Percentage symbol [CHAR LIMIT = 1] -->
+    <string name="percentage_sign">%</string>
+
+    <!-- hash tag text [CHAR LIMIT = NONE] -->
+    <string name="hash_tag_text">#knowledgeIsPower</string>
+
+    <!-- hint text for difficulty level name field [CHAR LIMIT = NONE] -->
+    <string name="name">Name</string>
+
+    <!-- difficult level prompt [CHAR LIMIT = NONE] -->
+    <string name="difficulty_level_prompt">Select a level.</string>
+
+    <!-- text on next button [CHAR LIMT = NONE] -->
+    <string name="next">Next</string>
+
+    <!-- text for "Easy" radio button [CHAR LIMIT = NONE] -->
+    <string name="easy">Easy</string>
+
+    <!-- text for "Hard radio button [CHAR LIMIT = NONE] -->
+    <string name="hard">Hard</string>
+
+    <!-- text on start button [CHAR LIMIT = NONE] -->
+    <string name="start_quiz_text">Start Quiz</string>
+
+    <!-- Header text for questions page [CHAR LIMIT = NONE] -->
+    <string name="questions">Questions</string>
+
+    <!-- Number zero (0) [CHAR LIMIT = NONE] -->
+    <string name="zero">0</string>
+
+    <!-- Number one (1) [CHAR LIMIT = NONE] -->
+    <string name="number_one">1.</string>
+
+    <!-- Number two (2) [CHAR LIMIT = NONE] -->
+    <string name="number_two">2.</string>
+
+    <!-- Number three (3) [CHAR LIMIT = NONE] -->
+    <string name="number_three">3.</string>
+
+    <!-- Number four (4) [CHAR LIMIT = NONE] -->
+    <string name="number_four">4.</string>
+
+    <!-- Number five (5) [CHAR LIMIT = NONE] -->
+    <string name="number_five">5.</string>
+
+    <!-- Number six (6) [CHAR LIMIT = NONE] -->
+    <string name="number_six">6.</string>
+
+    <!-- Number seven (7) [CHAR LIMIT = NONE] -->
+    <string name="number_seven">7.</string>
+
+    <!-- Number eight (8) [CHAR LIMIT = NONE] -->
+    <string name="number_eight">8.</string>
+
+    <!-- Number nine (9) [CHAR LIMIT = NONE] -->
+    <string name="number_nine">9.</string>
+
+    <!-- Number ten (10) [CHAR LIMIT = NONE] -->
+    <string name="number_ten">10.</string>
+
+    <!-- Question 1 [CHAR LIMIT = NONE] -->
+    <string name="question_one">What Continent has the fewest flowering plants?</string>
+
+    <!-- Option A for question 1 [CHAR LIMIT = NONE] -->
+    <string name="one_a">North America</string>
+
+    <!-- Option B for question 1 [CHAR LIMIT = NONE] -->
+    <string name="one_answer">Antarctica</string>
+
+    <!-- Option C for question 1 [CHAR LIMIT = NONE] -->
+    <string name="one_c">Europe</string>
+
+    <!-- Option D for question 1 [CHAR LIMIT = NONE] -->
+    <string name="one_d">Africa</string>
+
+    <!-- Question 2 [CHAR LIMIT = NONE] -->
+    <string name="question_two">What element is symbolized with the letter \"K\"</string>
+
+    <!-- Option A for question 2 [CHAR LIMIT = NONE] -->
+    <string name="two_answer">Potassium</string>
+
+    <!-- Option B for question 2 [CHAR LIMIT = NONE] -->
+    <string name="two_b">Krypton</string>
+
+    <!-- Option C for question 2 [CHAR LIMIT = NONE] -->
+    <string name="two_c">Calcium</string>
+
+    <!-- Option D for question 2 [CHAR LIMIT = NONE] -->
+    <string name="two_d">Phosphorous</string>
+
+    <!-- Question 3 [CHAR LIMIT = NONE] -->
+    <string name="question_three">The May Queen, Wisley Crab, Lane\'s Prince Albert and Foxwhelps are all species of what?</string>
+
+    <!-- Option A for question 3 [CHAR LIMIT = NONE] -->
+    <string name="three_a">Spiders</string>
+
+    <!-- Option B for question 3 [CHAR LIMIT = NONE] -->
+    <string name="three_b">Sun Flowers</string>
+
+    <!-- Option C for question 3 [CHAR LIMIT = NONE] -->
+    <string name="three_c">Grasshoppers</string>
+
+    <!-- Option D for question 3 [CHAR LIMIT = NONE] -->
+    <string name="three_answer">Apples</string>
+
+    <!-- Question 4 [CHAR LIMIT = NONE] -->
+    <string name="question_four">Who averaged one patent for every three weeks of his life?</string>
+
+    <!-- Option A for question 4 [CHAR LIMIT = NONE] -->
+    <string name="four_a">Leonardo Da Vinci</string>
+
+    <!-- Option B for question 4 [CHAR LIMIT = NONE] -->
+    <string name="four_b">Alexander Bell</string>
+
+    <!-- Option C for question 4 [CHAR LIMIT = NONE] -->
+    <string name="four_c">Isaac Newton</string>
+
+    <!-- Option D for question 4 [CHAR LIMIT = NONE] -->
+    <string name="four_answer">Thomas Edison</string>
+
+    <!-- Question 5 [CHAR LIMIT = NONE] -->
+    <string name="question_five">What is the largest and denset of the four rocky planets?</string>
+
+    <!-- Option A for question 5 [CHAR LIMIT = NONE] -->
+    <string name="five_answer">Earth</string>
+
+    <!-- Option B for question 5 [CHAR LIMIT = NONE] -->
+    <string name="five_b">Mars</string>
+
+    <!-- Option C for question 5 [CHAR LIMIT = NONE] -->
+    <string name="five_c">Venus</string>
+
+    <!-- Option D for question 5 [CHAR LIMIT = NONE] -->
+    <string name="five_d">Jupiter</string>
+
+    <!-- Question 6 [CHAR LIMIT = NONE] -->
+    <string name="question_six">Someone who suffers from oneirophobia is scared of what?</string>
+
+    <!-- Option A for question 6 [CHAR LIMIT = NONE] -->
+    <string name="six_a">Loneliness</string>
+
+    <!-- Option B for question 6 [CHAR LIMIT = NONE] -->
+    <string name="six_b">Strangers</string>
+
+    <!-- Option C for question 6 [CHAR LIMIT = NONE] -->
+    <string name="six_answer">Dreams</string>
+
+    <!-- Option D for question 6 [CHAR LIMIT = NONE] -->
+    <string name="six_d">Nothing</string>
+
+    <!-- Question 7 [CHAR LIMIT = NONE] -->
+    <string name="question_seven">What is the only rock regularly eaten by humans?</string>
+
+    <!-- Option A for question 7 [CHAR LIMIT = NONE] -->
+    <string name="seven_a">Lime Stone</string>
+
+    <!-- Option B for question 7 [CHAR LIMIT = NONE] -->
+    <string name="seven_b">Ice block</string>
+
+    <!-- Option C for question 7 [CHAR LIMIT = NONE] -->
+    <string name="seven_c">Sand grains</string>
+
+    <!-- Option D for question 7 [CHAR LIMIT = NONE] -->
+    <string name="seven_answer">Salt</string>
+
+    <!-- Question 8 [CHAR LIMIT = NONE] -->
+    <string name="question_eight">The hardest natural substance known is what?</string>
+
+    <!-- Option A for question 8 [CHAR LIMIT = NONE] -->
+    <string name="eight_answer">Diamond</string>
+
+    <!-- Option B for question 8 [CHAR LIMIT = NONE] -->
+    <string name="eight_b">Volcanic Rock</string>
+
+    <!-- Option C for question 8 [CHAR LIMIT = NONE] -->
+    <string name="eight_c">Steel</string>
+
+    <!-- Option D for question 8 [CHAR LIMIT = NONE] -->
+    <string name="eight_d">Iron</string>
+
+    <!-- Question 9 [CHAR LIMIT = NONE] -->
+    <string name="question_nine">Which atmospheric gas is the most common?</string>
+
+    <!-- Option A for question 9 [CHAR LIMIT = NONE] -->
+    <string name="nine_a">Silicon</string>
+
+    <!-- Option B for question 9 [CHAR LIMIT = NONE] -->
+    <string name="nine_b">Oxygen</string>
+
+    <!-- Option C for question 9 [CHAR LIMIT = NONE] -->
+    <string name="nine_answer">Nitrogen</string>
+
+    <!-- Option D for question 9 [CHAR LIMIT = NONE] -->
+    <string name="nine_d">Hydrogen</string>
+
+    <!-- Question 10 [CHAR LIMIT = NONE] -->
+    <string name="question_ten">What is the biggest animal to have inhabited th earth?</string>
+
+    <!-- Option A for question 10 [CHAR LIMIT = NONE] -->
+    <string name="ten_a">Elephant</string>
+
+    <!-- Option B for question 10 [CHAR LIMIT = NONE] -->
+    <string name="ten_b">Shark</string>
+
+    <!-- Option C for question 10 [CHAR LIMIT = NONE] -->
+    <string name="ten_c">Hippopotamus</string>
+
+    <!-- Option D for question 10 [CHAR LIMIT = NONE] -->
+    <string name="ten_answer">Blue Whale</string>
+
+    <!-- text on done button [CHAR LIMIT = NONE -->
+    <string name="done">Done</string>
+
+    <!-- title for Quiz score [CHAR LIMIT = NONE] -->
+    <string name="quiz_score">Quiz Score</string>
+
+    <!-- symbol for colon [CHAR LIMIT = NONE] -->
+    <string name="colon">:</string>
+
+    <!-- "Hello" [CHAR LIMIT = NONE] -->
+    <string name="hello">Hello</string>
+
+    <!-- Final report message [CHAR LIMIT = NONE] -->
+    <string name="report_message">
+        Congratulations on taking the Creed!
+    </string>
+
+    <!-- text to hint answer field [CHAR LIMIT = NONE] -->
+    <string name="answer">Answer</string>
+
+    <!-- text on reset button [CHAR LIMIT = NONE] -->
+    <string name="reset">Reset</string>
+
+    <!-- Link to questions and answers [CHAR LIMIT = NONE] -->
+    <string name="reference">Courtesy: https://buzznigeria.com/fun-trivia-questions-answers/</string>
+</resources>
