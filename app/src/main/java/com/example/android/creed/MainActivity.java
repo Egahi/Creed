@@ -1,17 +1,15 @@
 package com.example.android.creed;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import junit.runner.Version;
 
 public class MainActivity extends AppCompatActivity {
     String userName;
@@ -29,17 +27,24 @@ public class MainActivity extends AppCompatActivity {
      * display the difficult selection page
      */
     public void displayDifficultyLevelPage (View view) {
+        // figure out name of user
+        EditText nameField = (EditText) findViewById(R.id.name_field);
+        userName = nameField.getText().toString();
+
         setContentView(R.layout.difficulty_level);
+
+        String message = getString(R.string.hello);
+        message += " " + userName;
+
+        // Welcome User
+        TextView textView = (TextView) findViewById(R.id.welcome_text);
+        textView.setText(message);
     }
 
     /**
      * display quiz questions based on difficulty level selected
      */
     public void displayQuizQuestion(View view) {
-        // figure out name of user
-        EditText nameField = (EditText) findViewById(R.id.name_field);
-        userName = nameField.getText().toString();
-
         // figure out if hard option was picked
         RadioButton radioButton = (RadioButton) findViewById(R.id.hard_option);
         boolean hardOption = radioButton.isChecked();
@@ -89,12 +94,17 @@ public class MainActivity extends AppCompatActivity {
         EditText answerField = (EditText) findViewById(R.id.question_one_answer);
         String answer = answerField.getText().toString();
 
-        // update score if answer is correct
         if (answer.toLowerCase().equals(getString(R.string.one_answer).toLowerCase())) {
+
+            // set the color of the correct answer to green
             answerField.setTextColor(getResources().getColor(R.color.green));
+
+            // update score if answer is correct
             updateScore();
         }
-        else {
+
+        // set color of wrong answer to red, skip if field is blank
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -107,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -120,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -133,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -146,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -159,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -172,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -185,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -198,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -211,10 +221,11 @@ public class MainActivity extends AppCompatActivity {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
-        else {
+        else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
+        // convert score to percentage
         score *= 10;
     }
 
@@ -236,8 +247,16 @@ public class MainActivity extends AppCompatActivity {
         // display score as a toast
         Toast.makeText(this, finalScore, Toast.LENGTH_LONG).show();
 
+        // display questions reference
         TextView scoreView = (TextView) findViewById(R.id.reference_label);
         scoreView.setText(getString(R.string.reference));
+
+        // disable Done button after click
+        Button button = (Button) findViewById(R.id.done_easy);
+        button.setEnabled(false);
+
+        // make button invisible
+        button.setVisibility(view.INVISIBLE);
 
         // reset score
         score = 0;
@@ -257,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_one);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_two_answer);
@@ -268,7 +287,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_two);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_three_answer);
@@ -279,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_three);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_four_answer);
@@ -290,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_four);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_five_answer);
@@ -301,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_five);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_six_answer);
@@ -312,7 +331,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_six);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_seven_answer);
@@ -323,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_seven);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_eight_answer);
@@ -334,18 +353,27 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_eight);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
-        radioButton = (RadioButton) findViewById(R.id.question_nine_answer);
-        if (radioButton.isChecked()) {
-            radioButton.setTextColor(getResources().getColor(R.color.green));
+        // checkboxes for question 9
+        CheckBox checkBox1 = (CheckBox) findViewById(R.id.question_nine_a);
+        CheckBox checkBox2 = (CheckBox) findViewById(R.id.question_nine_answer1);
+        CheckBox checkBox3 = (CheckBox) findViewById(R.id.question_nine_answer2);
+        CheckBox checkBox4 = (CheckBox) findViewById(R.id.question_nine_d);
+
+        // grade as passed if and only if the 2 correct options are picked and no other
+        if (checkBox2.isChecked() && checkBox3.isChecked() && !checkBox1.isChecked() && !checkBox4.isChecked()) {
+            checkBox2.setTextColor(getResources().getColor(R.color.green));
+            checkBox3.setTextColor(getResources().getColor(R.color.green));
             updateScore();
         }
         else {
-            RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_nine);
-            radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            // set wrong selections to color red
+            if (checkBox1.isChecked()) { checkBox1.setTextColor(getResources().getColor(R.color.red));}
+            if (checkBox2.isChecked()) { checkBox2.setTextColor(getResources().getColor(R.color.red));}
+            if (checkBox3.isChecked()) { checkBox3.setTextColor(getResources().getColor(R.color.red));}
+            if (checkBox4.isChecked()) { checkBox4.setTextColor(getResources().getColor(R.color.red));}
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_ten_answer);
@@ -356,11 +384,12 @@ public class MainActivity extends AppCompatActivity {
         else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_ten);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            radioButton.setTextColor(getResources().getColor(R.color.red));
+            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
         }
 
         // convert score to percentage
         score *= 10;
+
     }
 
     /**

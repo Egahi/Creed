@@ -14,7 +14,7 @@
     <string name="hash_tag_text">#knowledgeIsPower</string>
 
     <!-- hint text for difficulty level name field [CHAR LIMIT = NONE] -->
-    <string name="name">Name</string>
+    <string name="name">userName</string>
 
     <!-- difficult level prompt [CHAR LIMIT = NONE] -->
     <string name="difficulty_level_prompt">Select a level.</string>
@@ -188,7 +188,7 @@
     <string name="eight_d">Iron</string>
 
     <!-- Question 9 [CHAR LIMIT = NONE] -->
-    <string name="question_nine">Which atmospheric gas is the most common?</string>
+    <string name="question_nine">Select the 2 most common atmospheric gases.</string>
 
     <!-- Option A for question 9 [CHAR LIMIT = NONE] -->
     <string name="nine_a">Silicon</string>
