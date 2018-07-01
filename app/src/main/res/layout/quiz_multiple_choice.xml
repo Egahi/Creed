@@ -9,6 +9,7 @@
         android:padding="16dp">
 
         <LinearLayout
+            android:id="@+id/linear_layout_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -776,6 +777,15 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/linear_layout_id"
+            android:layout_centerHorizontal="true"
+            android:text="@string/contact"
+            android:textSize="16sp" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -786,10 +796,11 @@
             android:textColor="@android:color/white" />
 
         <Button
+            android:id="@+id/done_easy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/done_easy"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:onClick="displayResultEasy"
             android:text="@string/done"

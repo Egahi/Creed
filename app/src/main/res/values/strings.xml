@@ -242,4 +242,7 @@
 
     <!-- Link to questions and answers [CHAR LIMIT = NONE] -->
     <string name="reference">Courtesy: https://buzznigeria.com/fun-trivia-questions-answers/</string>
+
+    <!-- contact details [CHAR LIMIT = NONE] -->
+    <string name="contact">\@s_egahi</string>
 </resources>

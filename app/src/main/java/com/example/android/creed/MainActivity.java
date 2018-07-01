@@ -12,6 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    String userName;
+    //user score
+    int score;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,23 +23,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * store data and UI state for persistence
-     */
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        // TODO
-    }
-
-    String userName;
-
-    //user score
-    int score;
-
-    /**
      * display the difficult selection page
      */
-    public void displayDifficultyLevelPage (View view) {
+    public void displayDifficultyLevelPage(View view) {
         // figure out name of user
         EditText nameField = (EditText) findViewById(R.id.name_field);
         userName = nameField.getText().toString();
@@ -79,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * display result for hard version
      */
-    public void displayResultHard (View view) {
+    public void displayResultHard(View view) {
         calculateScoreHard();
 
         String finalScore = getString(R.string.quiz_score) + " " + score + getString(R.string.percentage_sign);
@@ -125,8 +115,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.two_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -138,8 +127,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.three_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -151,8 +139,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.four_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -164,8 +151,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.five_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -177,8 +163,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.six_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -190,8 +175,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.seven_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -203,8 +187,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.eight_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -216,8 +199,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.nine_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -229,8 +211,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer.toLowerCase().equals(getString(R.string.ten_answer).toLowerCase())) {
             answerField.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else if (!answer.equals("")) {
+        } else if (!answer.equals("")) {
             answerField.setTextColor(getResources().getColor(R.color.red));
         }
 
@@ -248,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * display result for easy version
      */
-    public void displayResultEasy (View view) {
+    public void displayResultEasy(View view) {
         calculateScoreEasy();
 
         String finalScore = getString(R.string.quiz_score) + " " + score + getString(R.string.percentage_sign);
@@ -281,88 +262,96 @@ public class MainActivity extends AppCompatActivity {
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_one);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_two_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_two);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_three_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_three);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_four_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_four);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_five_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_five);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_six_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_six);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_seven_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_seven);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_eight_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_eight);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         // checkboxes for question 9
@@ -376,24 +365,32 @@ public class MainActivity extends AppCompatActivity {
             checkBox2.setTextColor(getResources().getColor(R.color.green));
             checkBox3.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             // set wrong selections to color red
-            if (checkBox1.isChecked()) { checkBox1.setTextColor(getResources().getColor(R.color.red));}
-            if (checkBox2.isChecked()) { checkBox2.setTextColor(getResources().getColor(R.color.red));}
-            if (checkBox3.isChecked()) { checkBox3.setTextColor(getResources().getColor(R.color.red));}
-            if (checkBox4.isChecked()) { checkBox4.setTextColor(getResources().getColor(R.color.red));}
+            if (checkBox1.isChecked()) {
+                checkBox1.setTextColor(getResources().getColor(R.color.red));
+            }
+            if (checkBox2.isChecked()) {
+                checkBox2.setTextColor(getResources().getColor(R.color.red));
+            }
+            if (checkBox3.isChecked()) {
+                checkBox3.setTextColor(getResources().getColor(R.color.red));
+            }
+            if (checkBox4.isChecked()) {
+                checkBox4.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         radioButton = (RadioButton) findViewById(R.id.question_ten_answer);
         if (radioButton.isChecked()) {
             radioButton.setTextColor(getResources().getColor(R.color.green));
             updateScore();
-        }
-        else {
+        } else {
             RadioGroup radioGroup = (RadioGroup) findViewById(R.id.question_ten);
             radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-            if (radioButton != null) {radioButton.setTextColor(getResources().getColor(R.color.red));}
+            if (radioButton != null) {
+                radioButton.setTextColor(getResources().getColor(R.color.red));
+            }
         }
 
         // convert score to percentage
