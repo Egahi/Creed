@@ -12,16 +12,25 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    String userName;
-
-    //user score
-    int score;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    /**
+     * store data and UI state for persistence
+     */
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        // TODO
+    }
+
+    String userName;
+
+    //user score
+    int score;
 
     /**
      * display the difficult selection page
@@ -389,7 +398,6 @@ public class MainActivity extends AppCompatActivity {
 
         // convert score to percentage
         score *= 10;
-
     }
 
     /**
